@@ -52,3 +52,4 @@ if prompt := st.chat_input("O que está acontecendo?"):
         response = st.write_stream(response_generator())
     # Adicionar a resposta do assistente ao histórico de chat
     st.session_state.messages.append({"role": "assistant", "content": response})
+
