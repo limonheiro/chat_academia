@@ -9,6 +9,7 @@ client = boto3.client("bedrock-runtime", region_name="us-east-1")
 model_id = "amazon.titan-text-premier-v1:0"
 
 # Envia a resposta do chatbot
+
 def response_generator():
     conversation = [
         {
@@ -20,7 +21,7 @@ def response_generator():
     response = client.converse(
         modelId=model_id,
         messages=conversation,
-        inferenceConfig={"maxTokens": 512, "temperature": 0.5, "topP": 0.9},
+        inferenceConfig={"maxTokens": 1024, "temperature": 0.5, "topP": 0.9},
     )
 
     # Extrair e imprimir a resposta.
@@ -30,7 +31,9 @@ def response_generator():
         yield word + " "
         time.sleep(0.06)
 
-st.title("Academia")
+
+st.image("./public/Black and Logo.webp", width=128)
+
 
 # Inicializar o histórico de chat
 if "messages" not in st.session_state:
@@ -48,8 +51,8 @@ if prompt := st.chat_input("O que está acontecendo?"):
         st.markdown(prompt)
     
     # Exibir a resposta do assistente no container de mensagens de chat
-    with st.chat_message("assistant"):
+    with st.chat_message("assistant", avatar="./public/face.webp"):
         response = st.write_stream(response_generator())
     # Adicionar a resposta do assistente ao histórico de chat
-    st.session_state.messages.append({"role": "assistant", "content": response})
+    st.session_state.messages.append({"role": "assistant", "content": response, "avatar":"./public/face.webp"}, )
 
