@@ -17,7 +17,7 @@ docker run -p 80:80 gymbot
 ## Equipe
 - **Scrum Master:** [Krisley Almeida](https://www.linkedin.com/in/krisley-almeida/)
 - **Líder Técnica:** [Lisandra Tkaczuk](https://www.linkedin.com/in/lisandra-tkaczuk-9b4529a7/)
-- **Desenvolvedores:** [Jamir Fadul](https://www.linkedin.com/in/jamir-fadul-042376221/), [Letícia Santos](https://www.linkedin.com/in/leticiareginasantos), Jhonney Lima, [Nicolas Timoteu](https://www.linkedin.com/in/nicolas-timoteu/), [Kyska Harrington](https://www.linkedin.com/in/kyskaharrington/), [Maiara Lira](https://www.linkedin.com/in/maiaraslira/)
+- **Desenvolvedores:** [Jamir Fadul](https://www.linkedin.com/in/jamir-fadul-042376221/), [Letícia Santos](https://www.linkedin.com/in/leticiareginasantos), [Jhonney Lima](https://www.linkedin.com/in/jhonney-lima-6794aa334/), [Nicolas Timoteu](https://www.linkedin.com/in/nicolas-timoteu/), [Kyska Harrington](https://www.linkedin.com/in/kyskaharrington/), [Maiara Lira](https://www.linkedin.com/in/maiaraslira/)
 - **Arquitetos:** [Ricardo Simines](https://www.linkedin.com/in/ricardosiminesscopim/), [Clayton Vieira](https://www.linkedin.com/in/claytonvieiracv/)
 
 ---
