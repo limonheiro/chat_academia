@@ -3,16 +3,16 @@
 # Docker
 
 ## Build
-``
+```bash
 docker build --no-cache --build-arg AWS_ACCESS_KEY_ID=YOUR_AWS_ACESS_KEY_ID \
   --build-arg  AWS_SECRET_ACCESS_KEY=YOUR_AWS_SECRET_ACCESS_KEY \
   --build-arg  AWS_DEFAULT_REGION=YOUR_AWS_DEFAULT_REGION \
   -t gymbot .
-``
+```
 ## RUN
-``
+```bash
 docker run -p 80:80 gymbot
-``
+```
 
 ---
 
