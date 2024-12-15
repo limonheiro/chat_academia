@@ -1,7 +1,5 @@
 # GymBot - Documentação do Projeto
 
-# Docker
-
 ## Build
 ```bash
 docker build --no-cache --build-arg AWS_ACCESS_KEY_ID=YOUR_AWS_ACESS_KEY_ID \
