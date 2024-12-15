@@ -2,12 +2,6 @@ from python:3.12.8-slim-bullseye
 
 WORKDIR /app
 
-COPY requirements.txt /app
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY public /app
-COPY *.py /app/
-
 # Variáveis de ambiente
 ARG AWS_ACCESS_KEY_ID
 ARG AWS_SECRET_ACCESS_KEY
@@ -23,8 +17,12 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
+RUN git clone https://github.com/limonheiro/chat_academia .
+
+RUN pip3 install -r requirements.txt
+
 EXPOSE 80
 
-HEALTHCHECK CMD curl --fail http://localhost:80/_stcore/health
+HEALTHCHECK CMD curl --fail https://localhost:80/_stcore/health
 
-CMD ["streamlit", "run", "app.py", "--server.port=80", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=80", "--server.address=0.0.0.0"]
